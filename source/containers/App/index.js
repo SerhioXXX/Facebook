@@ -27,14 +27,13 @@ export default class App extends Component {
             isAuthenticated:      false,
             _logOut:              this._logOut,
         };
-        console.log('App -------> constructor');
+
     }
 
     componentDidMount () {
         if (localStorage.getItem('switch') !== null) {
             this._ls();
         }
-        console.log('App -------> componentDidMount');
     }
 
      _ls = () => {
@@ -60,8 +59,6 @@ export default class App extends Component {
 
     render () {
         const { isAuthenticated } = this.state;
-
-        console.log('App -------> render', isAuthenticated);
 
         return (
             <Catcher>
